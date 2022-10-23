@@ -1,0 +1,33 @@
+---
+const data = [
+  {
+    question: 'What types of websites do you build?',
+    answer:
+      'We build all different kinds of awesome websites! Whether it is a simple static site that displays some information, or a complex website with lots of integration and functionality.',
+  },
+  {
+    question: 'If I already have an existing website, how can you help me?',
+    answer:
+      'We love making websites better! Often times websites will be lacking in speed, SEO, or design. We guarantee we can make your website better and in turn make your business better as well!',
+  },
+  {
+    question: 'How much does hosting cost?',
+    answer:
+      'We offer very affordable hosting for your site. Since we build our websites from scratch you in turn will get hosting that is cheaper then almost all other things out there!',
+  },
+];
+---
+
+<section class="mx-auto mt-12 w-[98%] max-w-5xl pb-8">
+  <h2 class="text-center text-3xl font-bold">FAQ'S</h2>
+  <div>
+    {
+      data.map((item) => (
+        <div class="mt-6">
+          <h3 class="text-2xl font-medium">{item.question}</h3>
+          <p class="text-gray mt-2">{item.answer}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

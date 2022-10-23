@@ -1,0 +1,25 @@
+---
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+const { image, title, link } = Astro.props;
+
+export type Props = {
+  image: string;
+  title: string;
+  link: string;
+};
+---
+
+<a
+  href={link}
+  target="_blank"
+  class="bg-darkGray border-lightGray relative m-4 flex flex-[1] flex-col items-center justify-center border-2 p-8 transition-transform hover:scale-105"
+>
+  <img
+    src={image}
+    alt={`${title} Logo`}
+    class="bg-darkWhite aspect-square w-20 rounded-full p-2"
+  />
+  <h3 class="mt-4 text-lg">{title}</h3>
+  <ArrowRightIcon className="text-primary absolute right-3 bottom-2 h-6 w-6" />
+</a>

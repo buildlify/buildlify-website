@@ -1,0 +1,12 @@
+---
+export interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<button
+  class="rounded-primary border-gray text-gray m-2 border-2 bg-transparent px-4 py-2"
+  >{text}</button
+>

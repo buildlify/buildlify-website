@@ -1,0 +1,30 @@
+---
+import WorkCard from './WorkCard.astro';
+
+const data = [
+  {
+    title: 'Centerpoint Church',
+    image: '/images/cpc-logo.png',
+    link: 'https://www.go2centerpoint.com/',
+  },
+  {
+    title: 'AZ Shield Home Inspections',
+    image: '/images/az-shield-logo.png',
+    link: 'https://www.azshieldhomeinspections.com/',
+  },
+  {
+    title: 'Set Apart Youth Conference',
+    image: '/images/set-apart-logo.png',
+    link: 'https://setapartyouthconference.com/',
+  },
+];
+---
+
+<section>
+  <h2 class="text-center text-3xl font-bold">Recent Work</h2>
+  <div
+    class="mx-auto flex w-full max-w-7xl flex-col justify-center md:flex-row"
+  >
+    {data.map((item) => <WorkCard {...item} />)}
+  </div>
+</section>
